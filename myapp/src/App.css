@@ -1,8 +1,10 @@
 body{
   background-color: #9ccef4;
+  font-family: Raleway;
+
 }
 .SearchContainer{
-  height: 3em;
+  height: 4em;
   background-color: #759EDA;
   flex-grow: 1;
   flex-shrink: 1;
@@ -12,25 +14,59 @@ body{
   margin-right: auto;
 }
 .SearchContainer > input{
-  font-family: Raileway;
-  font-size:8px;
+  font-size:15px;
   margin-top: 1%;
   margin-bottom: 1%;
   padding-left: 5px;
-  background-color: #759EDA;
   color:white;
-  border-color:#759EDA ;
-  border-top:none;
+  border: none;
+  background-color: transparent;
 }
+button:active,button:focus{
+    outline: none;
+    box-shadow: none;
+ 
+}
+input:active,input:focus
+{
+ box-shadow: none !important;
+ -moz-box-shadow: none !important;
+ -webkit-box-shadow: none !important;
+ outline: none !important;
+ border-bottom: solid #050404 1px;
+ padding-bottom: 5px;
+ margin-left: 5px;}
+::placeholder {
+    color: white;
+    opacity: 0.7; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+    opacity: 0.7;  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+    opacity: 0.7;  }
+
 .SearchContainer >button{
-  font-family: Raileway;
-  margin-top: 8px;
+  margin-top: 15px;
   margin-bottom: 1%;
+  margin-left: 5px;
   padding: 7px;
   background-color: #5879c7;
   color:rgb(0, 0, 0);
-  border:none;
   border-radius:0%;
+  padding-left: 10px;
+  border: none;
+
+}
+#below-pic{
+    display: block;
+    padding-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 .temp24{
   display: flex;
@@ -39,32 +75,39 @@ body{
   justify-content: center;
 }
 .temp24>div{
-  padding-left: 4em;
+  padding-left: 2em;
   padding-right: 2em;
   flex-grow: 1;
   flex-shrink: 1;
+  margin-top: 6em;
 }
-.temp24>div>p{
+
+.temp24>div>#Time{
+margin-bottom: 2em;
+padding-left: 1em;
+}
+.temp24>div>#Deg{
+  margin-top: 2em;
   padding-left: 1em;
-}
+  }
+  
+
 .pic1>img{
   display: block;
   padding-top: 1.5em;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1.5em;
   width: 25%;
 }
-.pic1>p{
-  text-align: center;
-}
- @media all and(max-width:600px){
+@media all and(max-width:600px){
+  .SearchContainer{
+    flex-wrap: wrap;
+  }
   .temp24{
     flex-wrap:wrap;
   }
   .temp24>div{
     flex:1 1 50%;
-  }
-  .SearchContainer{
-    flex-wrap: wrap;
   }
 }
